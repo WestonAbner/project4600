@@ -1,0 +1,54 @@
+﻿<Window x:Class="CSCI4600Project.StaffWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSCI4600Project"
+        mc:Ignorable="d"
+        Title="StaffWindow" Height="600" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontSize="16" FontFamily="Times New Roman">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="White"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Label Content="Welcome, " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Content="Admin" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.013,0.382" FontWeight="Bold"/>
+
+            <Button x:Name="LogoutButton" Content="Logout" HorizontalAlignment="Left" Margin="10,519,0,0" VerticalAlignment="Top" Width="110" Height="40" Click="LogoutButton_Click"/>
+
+            <Button x:Name="AccountButton" Content="Account" HorizontalAlignment="Left" Margin="10,450,0,0" VerticalAlignment="Top" Width="110" Height="40" Click="AccountButton_Click"/>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Label Content="Students:" Grid.Column="1" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24"/>
+            <Button x:Name="RemoveButton" HorizontalAlignment="Left" Margin="674,325,0,0" VerticalAlignment="Top" Width="110" Height="40" Content="Remove" Click="RemoveButton_Click"/>
+            <ListBox x:Name="StudentsList" HorizontalAlignment="Left" Height="273" Margin="11,47,0,0" VerticalAlignment="Top" Width="773"/>
+            <Label x:Name="LiveTimeLabel" Content="" HorizontalAlignment="Left" Margin="702,530,0,0" VerticalAlignment="Top" Height="31" Width="72">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="White" Offset="0.474"/>
+                        <GradientStop Color="#FF080808" Offset="0.9"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="LiveTimeLabel_Copy" Content="" HorizontalAlignment="Left" Margin="630,530,0,0" VerticalAlignment="Top" Height="31" Width="72">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="White" Offset="0.474"/>
+                        <GradientStop Color="#FF080808" Offset="0.9"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+        </Grid>
+    </Grid>
+</Window>
